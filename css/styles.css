@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+
+body {
+			font-family: Arial, sans-serif;
+			box-sizing: border-box;
+		}
+h1 {
+			text-align: center;
+			margin-top: 50px;
+			font-weight: bold;
+			color: #333;
+    }
+
+		form {
+			display: flex;
+			justify-content: center;
+			margin: 50px 0;
+		}
+
+		#todo-input {
+			padding: 10px;
+			border: none;
+			border-bottom: 2px solid #333;
+			width: 300px;
+			font-size: 18px;
+			margin-right: 10px;
+		}
+
+		#todo-input:focus {
+			outline: none;
+			border-color: #888;
+		}
+
+		button[type="submit"] {
+			background-color: #333;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			cursor: pointer;
+			font-size: 18px;
+			border-radius: 5px;
+		}
+
+		button[type="submit"]:hover {
+			background-color: #555;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		li {
+			display: flex;
+			align-items: center;
+			margin: 10px 0;
+			padding: 10px;
+			width: 400px;
+			background-color: #fff;
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+		}
+
+		li span {
+			flex: 1;
+			margin-right: 10px;
+			font-size: 18px;
+			color: #333;
+			text-decoration: ${(task) => task.completed ? 'line-through' : 'none'};
+		}
+
+		li button {
+			background-color: #fff;
+			color: #333;
+			border: 1px solid #333;
+			padding: 5px 10px;
+			cursor: pointer;
+			font-size: 14px;
+			border-radius: 5px;
+			margin-left: 10px;
+		}
+
+		li button:hover {
+			background-color: #333;
+			color: #fff;
+		}
+
+li span {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+li span.completed {
+  text-decoration: line-through;
+}
